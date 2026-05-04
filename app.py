@@ -106,7 +106,7 @@ def load_or_train_model():
         return model, vectorizer, accuracy
 
     # Otherwise, train from scratch
-    df = pd.read_csv("data/news.csv")
+    df = pd.read_csv("news.csv")
     df['label_num'] = df['label'].map({'REAL': 1, 'FAKE': 0})
 
     X = df['text']
